@@ -8,6 +8,8 @@ Thanks for original, as usual with adafruit a bit overkill, and the overkill did
 
 and , having skimmed the sht3/x datasheet, it's like the heater should only be used for self check... like does the heater increase temperature and decrease humidity???? yes? then it is working... and maybe periodic condensation burn off ???
 
+note I have not tested this without passing in a pre initialised wire pointer...
+
 # Adafruit Bus IO Library [![Build Status](https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_BusIO/actions)
 
 
