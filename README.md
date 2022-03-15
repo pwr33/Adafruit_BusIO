@@ -6,6 +6,8 @@ note that I only wanted SGP30 and SHT31 libraries and they are the only ones tha
 
 Thanks for original, as usual with adafruit a bit overkill, and the overkill did not even include the feature I wanted, whereas sparkfun sgp30 library defaults to just passing in the pre initialised wire pointer, they have no sht3 series library.... and I do not beleive in reinventing the wheel, but its like discovering down the road you just used their pentagram shaped wheel LOL and you should have "reinvented" it! $fn=30; LOL
 
+and , having skimmed the sht3/x datasheet, it's like the heater should only be used for self check... like does the heater increase temperature and decrease humidity???? yes? then it is working... and maybe periodic condensation burn off ???
+
 # Adafruit Bus IO Library [![Build Status](https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_BusIO/actions)
 
 
