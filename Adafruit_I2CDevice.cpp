@@ -7,10 +7,10 @@
  *    @param  addr The 7-bit I2C address for the device
  *    @param  theWire The I2C bus to use, defaults to &Wire
  */
-Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire) {
+Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire, bool initWire) {
   _addr = addr;
   _wire = theWire;
-  _begun = false;
+  _begun = !initWire;
 #ifdef ARDUINO_ARCH_SAMD
   _maxBufferSize = 250; // as defined in Wire.h's RingBuffer
 #else
@@ -26,7 +26,7 @@ Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire) {
  *    @return True if I2C initialized and a device with the addr found
  */
 bool Adafruit_I2CDevice::begin(bool addr_detect) {
-  _wire->begin();
+  if (!_begun) _wire->begin();
   _begun = true;
 
   if (addr_detect) {
