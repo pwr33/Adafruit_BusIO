@@ -6,6 +6,7 @@
  *    @brief  Create an I2C device at a given address
  *    @param  addr The 7-bit I2C address for the device
  *    @param  theWire The I2C bus to use, defaults to &Wire
+ *    @param  initWire, whether to call Wire.begin() or not, defaults to true, the existing behaviour
  */
 Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire, bool initWire) {
   _addr = addr;
